@@ -51,3 +51,7 @@ def main():
 
     # plotting regression line
     plot_regression_line(input_x, input_y, b)
+
+
+if __name__ == "__main__":
+    main()
