@@ -7,6 +7,8 @@ def gradient_descent(x, y):
     iteration = 1000
     n = len(x)
     learning_rate = 0.001
+    plt.scatter(x, y, color="m",
+                marker="o", s=30)
     for i in range(iteration):
         y_pred = m * x + b
         cost = (1.0 / n) * sum([val**2 for val in (y - y_pred)])
@@ -14,8 +16,6 @@ def gradient_descent(x, y):
         db = (-2 / n) * sum((y - y_pred))
         m = m - learning_rate * dm
         b = b - learning_rate * db
-        plt.scatter(x, y, color="m",
-                    marker="o", s=30)
         print (i, cost, m, b)
         plt.plot(x, y_pred, color="g")
         # putting labels
