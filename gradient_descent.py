@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 def gradient_descent(x, y):
     m = b = 0
-    iteration = 100
+    iteration = 1000
     n = len(x)
     learning_rate = 0.001
     for i in range(iteration):
@@ -21,7 +21,8 @@ def gradient_descent(x, y):
         # putting labels
         plt.xlabel('x')
         plt.ylabel('y')
-        plt.show()
+        plt.legend()
+    plt.show()
 
 
 def main():
